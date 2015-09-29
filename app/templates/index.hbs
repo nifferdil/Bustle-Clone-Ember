@@ -1,10 +1,8 @@
 
 <div class="container">
-  <ul>
+
     {{#each model as |article|}}
-      <li><h1>{{article.title}}</h1>
-        <img src={{article.image}}>
-      </li>
+      <div class="well text-center">{{#link-to 'article' article.id}}<h1>{{article.title}}</h1><img src={{article.image}}> {{/link-to}}
+      </div>
     {{/each}}
-  </ul>
 </div>
