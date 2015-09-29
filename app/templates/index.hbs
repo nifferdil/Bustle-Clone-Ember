@@ -24,11 +24,10 @@
     {{#each model as |article|}}
 
       <div class="item">
-        <h2>{{article.title}}</h2>
+        {{#link-to 'article' article.id}}<h2>{{article.title}}</h2>
         <!-- {{#link-to 'article2'}}<img class='carousel-image ' src="img/woah.jpg" alt="...">{{/link-to}} -->
-        <p class="text-center"><img src={{article.image}} ></p>
+        <p class="text-center"><img src={{article.image}} ></p>{{/link-to}}
         <div class="carousel-caption col-md-12">
-          <span class='col-md-8'>{{article.content}}</span>
           <!-- <span class='carousel-category col-md-4'>Wearable Tech</span> -->
         </div>
       </div>
